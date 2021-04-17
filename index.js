@@ -1,7 +1,8 @@
-const throwDice = () => {
+throwDice = document.querySelector('#reload');
+// throw dice
+throwDice.addEventListener('click', () => {
 const title = document.querySelector('h1'),
-    diceImg = document.querySelectorAll('img'),
-    throwDice = document.querySelector('#reload');
+    diceImg = document.querySelectorAll('img');
 
 let randomNumberPlayer1 = Math.floor(Math.random() * 6) + 1;
 let randomNumberPlayer2 = Math.floor(Math.random() * 6) + 1;
@@ -19,6 +20,4 @@ let winner = (randomNumberPlayer1 > randomNumberPlayer2) ? "🏆Player 1 Wins!" 
 
 // show winner in title
 title.innerText = winner;
-}
-// throw dice
-reload.addEventListener('click', throwDice());
+})
